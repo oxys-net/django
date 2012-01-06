@@ -95,7 +95,7 @@ class CursorWrapper(object):
     def __init__(self, cursor):
         self.cursor = cursor
 
-    def execute(self, query, args=None):
+    def execute(self, query, args=()):
         try:
             return self.cursor.execute(query, args)
         except Database.IntegrityError, e:
